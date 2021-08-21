@@ -1,0 +1,33 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main",
+    "dev": "nodemon main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Horleryheancarh/Portfolio.git"
+  },
+  "author": "Horleryheancarh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Horleryheancarh/Portfolio/issues"
+  },
+  "homepage": "https://github.com/Horleryheancarh/Portfolio#readme",
+  "dependencies": {
+    "fastify": "^3.20.2",
+    "fastify-formbody": "^5.1.0",
+    "fastify-mailer": "^2.2.0",
+    "fastify-static": "^4.2.3",
+    "moment": "^2.29.1",
+    "nodemailer": "^6.6.3",
+    "nodemon": "^2.0.12"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0"
+  }
+}
