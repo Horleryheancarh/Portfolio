@@ -1,4 +1,4 @@
-const dotenv = require('dotenv')
+// const dotenv = require('dotenv')
 const fastify = require('fastify')
 const { join } = require('path')
 
