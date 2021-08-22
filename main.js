@@ -6,7 +6,7 @@ const { join } = require('path')
 
 // Presets
 //dotenv.config()
-const app = fastify({ logger: false })
+const app = fastify({ logger: true })
 const PORT = process.env.PORT || 3000
 
 app.register(require('fastify-static'), {
@@ -43,24 +43,24 @@ app.post('/', (request, reply) => {
   }, (errors, info) => {
 
     if (errors) {
-      // console.log(errors)
+      console.log(errors)
       reply.status(500)
-      // reply.send({
-      //   status: 'error',
-      //   message: 'Something went wrong'
-      // })
+      reply.send({
+        status: 'error',
+        message: 'Something went wrong'
+      })
     }else{
       // console.log(info)
       reply.status(200)
       reply.direct('/')
-      // reply.send({
-      //   status: 'OK',
-      //   message: 'Message sent',
-      //   info: {
-      //     from: info.envelope.from,
-      //     to: info.envelope.to
-      //   }
-      // })
+      reply.send({
+        status: 'OK',
+        message: 'Message sent',
+        info: {
+          from: info.envelope.from,
+          to: info.envelope.to
+        }
+      })
     }
   })
 })
