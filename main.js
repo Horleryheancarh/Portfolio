@@ -5,8 +5,8 @@ const { join } = require('path')
 
 
 // Presets
-dotenv.config()
-const app = fastify({ logger: true })
+//dotenv.config()
+const app = fastify({ logger: false })
 const PORT = process.env.PORT || 3000
 
 app.register(require('fastify-static'), {
