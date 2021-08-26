@@ -1,11 +1,11 @@
-// const dotenv = require('dotenv')
+const dotenv = require('dotenv')
 const fastify = require('fastify')
 const { join } = require('path')
 
 
 
 // Presets
-//dotenv.config()
+dotenv.config()
 const app = fastify({ logger: true })
 const PORT = process.env.PORT || 3000
 
